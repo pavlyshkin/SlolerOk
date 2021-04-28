@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
     
@@ -16,15 +18,15 @@
         <div class="container">
             <div class="nav">
                 <div class="header__logo">
-                    <h3 class="logo">Мастер столяров</h3>
+                    <a href="index.html" class="logo">Clock<span class="logo__sup">&</span>Table</a>
+                </div>
+                <div class="header__phone">
+                    <a href="tel:+79653811818" class="tel">+7-(965)-381-18-18</a>
                 </div>
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__list-item">
                             <a href="#" class="menu__list-link">О нас</a>
-                        </li>
-                        <li class="menu__list-item">
-                            <a href="#" class="menu__list-link">Контанкты</a>
                         </li>
                         <li class="menu__list-item">
                             <a href="#" class="menu__list-link">Работы</a>
@@ -36,27 +38,143 @@
     </header>
 
     <main>
-        <section class="intro">
-            <div class="container">
-                <h1 class="intro_title">
-                    Откройте для себя удивительный мир смолистых столов
-                </h1>
-                <p class="intro_subtitle"> 
-                </p>
-                    <div class="card">
-                    <span class="card-title">Остались вопросы? Звоните</span>
-                    <form action="Send.php" method="POST" class="form bell">
-                        <div class="mainpage-input__group">
-                            <input type="text" class="input card-input" name="name" required minlength="3" placeholder="">
-                        </div>
-                        <div class="mainpage-input__group">
-                            <input type="text" class="input card-input phone" name="phone" required minlength="16">
-                        </div>
-                        <button class="button bell-button">ЗАКАЗАТЬ ЗВОНОК</button>
-                    </form>
+        <div class="parallax-window" data-parallax="scroll" data-image-src="img/bg-intro.jpg" data-speed="0.5">
+            <section class="intro">
+                <div class="container">
+                    <div class="intro__page">
+                        <div class="intro__info">
+                            <h1 class="intro__title">
+                            Откройте удивительный мир столов из эпоксидной смолы
+                        </h1>
+                        <p class="intro__subtitle"> 
+                            стол из эпоксидной смолы - необычная деталь интерьера. Оригинальная деревянная мебель, созданная с использованием современных технологий, порадует домочадцев и непременно удивит гостей.
+                        </p>
                     </div>
+                        <div class="card">
+                        <span class="card-title">Остались вопросы? Звоните</span>
+                            <form action="Send.php" method="POST" class="form card__form">
+                            <div class="card-input__group">
+                                <input type="text" class="input card-input" name="name" required minlength="3" placeholder="Имя">
+                            </div>
+                            <div class="card-input__group">
+                                <input type="text" class="input card-input phone" name="phone" required minlength="16" >
+                            </div>
+                            <button class="button card-button">ЗАКАЗАТЬ ЗВОНОК</button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    <section class="benefits">
+        <div class="container benefits__container">
+            <h2 class="benefits__title">
+                    Преимущества Clock & Table
+                </h2>
+                <div class="benefits__cards">
+                    <div class="benefirs__wrap">
+                        <div class="wrap__img">
+                            <img class='wrap__pic' src="img/town.svg" alt="">
+                        </div>
+                        <h3 class="wrap__title">
+                            Наш выбор древисинны 
+                        </h3>
+                        <p class="wrap__text">
+                            У нас только качественная древесинная, которую мы сами заготавливаем
+                        </p>
+                        <a class='wrap__link' href="#">
+                            LEARN MORE
+                        </a>
+                    </div>
+                    <div class="benefirs__wrap">
+                        <div class="wrap__img">
+                            <img class='wrap__pic' src="img/town.svg" alt="">
+                        </div>
+                        <h3 class="wrap__title">
+                            Наш подход к работе
+                        </h3>
+                        <p class="wrap__text">
+                            Свою работу мы выполняем четко в сроки. Поэтому клиенты всегда остаются довольными (Отзовы)
+                        </p>
+                        <a class='wrap__link' href="">
+                            LEARN MORE
+                        </a>
+                    </div>
+                    <div class="benefirs__wrap">
+                        <div class="wrap__img">
+                            <img class='wrap__pic' src="img/town.svg" alt="">
+                        </div>
+                        <h3 class="wrap__title">
+                            Наш коллектив
+                        </h3>
+                        <p class="wrap__text">
+                            Мы долго искали таких профессионалов, которые у нас работают
+                        </p>
+                        <a class='wrap__link' href="">
+                            LEARN MORE
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+        <section class="example">
+            <div class="container">
+                <h1 class="example__title title">Наши Работы</h1>
+                  <div class="swiper-container example-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide example-slider__item">
+                            <img class="example-slider__img" src="img/slider-1.jpg" alt="1">
+                        </div>
+                        <div class="swiper-slide example-slider__item">
+                            <img class="example-slider__img" src="img/slider-2.jpg" alt="2">
+                        </div>
+                        <div class="swiper-slide example-slider__item">
+                            <img class="example-slider__img" src="img/slider-3.jpg" alt="3">
+                        </div>
+                        <div class="swiper-slide example-slider__item">
+                            <img class="example-slider__img" src="img/slider-4.jpg" alt="4">
+                        </div>
+                        <div class="swiper-slide example-slider__item">
+                            <img class="example-slider__img" src="img/slider-5.jpg" alt="5">
+                        </div>
+                        <div class="swiper-slide example-slider__item">
+                            <img class="example-slider__img" src="img/slider-6.jpg" alt="5">
+                        </div>
+                        <div class="swiper-slide example-slider__item">
+                            <img class="example-slider__img" src="img/slider-8.jpg" alt="5">
+                        </div>
+                        <div class="swiper-slide example-slider__item">
+                            <img class="example-slider__img" src="img/slider-9.jpg" alt="5">
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                </div>
             </div>
         </section>
     </main>
+
+    
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
