@@ -28,8 +28,8 @@ $(document).ready(function () {
         clickable: true,
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.example-button-next',
+        prevEl: '.example-button-prev',
       },
       keyboard: {
         pageLeftRight: true

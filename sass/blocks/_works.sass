@@ -1,0 +1,60 @@
+.works
+  padding: 100px 0
+  &__title
+    padding-bottom: 75px
+    width: 100%
+    text-align: center
+    font-style: normal
+    font-weight: 500
+    font-size: 35px
+    line-height: 42px
+  &__cards
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+  &__img
+    width: 100%
+    transition: .15s all
+    transform: scale(1.05)
+    &-size
+      &--lg
+        height: 354px
+        object-fit: cover
+      &--sm
+        height: 283px
+        object-fit: cover
+  &__card
+    position: relative
+    overflow: hidden
+    border-radius: 10px
+    &-title
+      font-size: 50px
+      line-height: 60px
+      color: #ffffff
+      position: absolute
+      bottom: 27px
+      left: 29px
+      z-index: 3
+    &-link
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 4
+    &:hover
+      transform: scale(1.05)
+    &::after
+      display: block
+      content: ""
+      width: 100%
+      height: 100%
+      background-color: rgba(21, 24, 36, 0.4)
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 2
+    &-size
+      &--lg
+        grid-column: span 3
+      &--sm
+        grid-column: span 2
