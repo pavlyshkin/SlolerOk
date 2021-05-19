@@ -1,5 +1,6 @@
 $(document).ready(function () {
-  
+  'use strict';
+
     $('.form').each(function(){
     $(this).validate({
     errorClass: "invalid",
@@ -34,5 +35,24 @@ $(document).ready(function () {
       keyboard: {
         pageLeftRight: true
       }
+    });
+
+    (function () {
+    const header = document.querySelector('.header');
+    window.onscroll = () => {
+        if(window.pageYOffset > 50){
+            header.classList.add('header__active');
+        } else{
+            header.classList.remove('header__active');
+        }
+    };
+  }());
+ 
+
+  $("#menu").on("click","a", function (event) {
+        event.preventDefault();
+        let id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
     });
 });

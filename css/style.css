@@ -61,6 +61,10 @@ a:hover {
   font-size: 21px;
 }
 
+.header__active {
+  background-color: #FF9783;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -455,5 +459,24 @@ label.invalid::after {
 .footer__logo--link {
   font-size: 40px;
   line-height: 60px;
+}
+
+.about-us__cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-us__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us__img--employee {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */
